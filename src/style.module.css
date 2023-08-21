@@ -1,0 +1,97 @@
+.content_section {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% - 15vw);
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar_section {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 15vw;
+    height: 100%;
+    padding-top: 3rem;
+    transition: all .3s ease-out;
+    z-index: 10;
+}
+
+
+.sidebar_section > img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+}
+
+.sidebar_list {
+    list-style: none;
+}
+
+.sidebar_list li a {
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    transition: .3s;
+    width: 100%;
+    padding: 1rem 1rem 1rem 0;
+}
+.sidebar_list li a:hover {
+    background-color: rgb(155, 154, 154);
+}
+
+.menu_button {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+}
+
+.table_container {
+    overflow-x: auto;
+}
+
+.posts_table tr >:not(:first-child) {
+    border-right: 1px solid #dee2e6
+}
+
+.comments_box {
+    position: fixed;
+    width: 50vw;
+    height: 40%;
+    background: var(--bs-light);
+    box-shadow: 0 0 3px #555;
+    top: 35%;
+    left: 20%;
+    z-index: 1000;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.radio_button {
+    float: none !important;
+    margin-left: .25em !important;
+}
+@media (max-width: 575px) {
+    .posts_table {
+        width: 130vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .content_section {
+        width: 100%;
+    }
+    .sidebar_section {
+        right: -50vw;
+        width: 30vw;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .content_section > i {
+        display: none;
+    }
+}
+
